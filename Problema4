@@ -1,0 +1,46 @@
+%4. Semnal sinusoidal redresat mono alternan??
+% Perioada semnalului sinusoidal initial (neredresat) 3 s. => F=1/3
+% Amplitudine: 0.8.
+
+% w(omega)= 2pi *frecventa
+
+% rezolutie temporara de 200 ms
+t=0:0.2:13; % 0.2 = 200ms
+F=1/3;
+s=0.8*sin(2*pi*t*F); % generam semnalul sinusoidal
+% pentru a face redresarea, 
+% semnalul va fi doar pozitiv (>0),
+% deoarece elementele vor deveni 0 cand trec pe partea negativa
+subplot(313)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+
+% rezolutie temporara de 20 ms
+t=0:0.02:13; %0.02 = 20ms
+F=1/3;
+s=0.8*sin(2*pi*t*F); % generam semnalul sinusoidal
+% pentru a face redresarea, 
+% semnalul va fi doar pozitiv (>0),
+% deoarece elementele vor deveni 0 cand trec pe partea negativa
+subplot(312)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+
+% rezolutie temporara de 2 ms
+t=0:0.002:13; % 0.002 = 2ms
+F=1/3;
+s=0.8*sin(2*pi*t*F); % generam semnalul sinusoidal
+% pentru a face redresarea, 
+% semnalul va fi doar pozitiv (>0),
+% deoarece elementele vor deveni 0 cand trec pe partea negativa
+subplot(311)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
