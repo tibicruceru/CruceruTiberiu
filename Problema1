@@ -1,0 +1,48 @@
+% Se va genera un semnal cu rezolutie temporara de 2ms, 20ms
+% 200ms pentru un semnal continuu de tipul:
+%1.Semnal dreptunghiular periodic cu
+% Perioada: 2 s. =>F=1/T=0.5Hz
+% Factor de umplere: 25%.
+% Nivel maxim: +0.5. minim=-1=> P=0.75
+
+% s=(P*square(w*t,duty))-nivel
+% w=2*pi*F
+
+% rezolutie temporara de 2 ms
+t=0:0.002:13; % 0.002=2 ms rezolutia temporala;
+F=0.5;
+duty=25;
+nivel=0.25;
+P=0.75;
+s=(0.75*square(2*pi*F*t,25))-0.25; % generam semanalul cu amplitudinea de 0.75; scadem 0.25, deoarece amplitudinea este cuprinsa intre -1 si 0.5;
+subplot(311)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+% rezolutie temporara de 20 ms
+t=0:0.02:13; % 0.02=20ms;
+F=0.5;
+duty=25;
+nivel=0.25;
+P=0.75;
+s=(0.75*square(2*pi*F*t,25))-0.25;  % generam semanalul cu amplitudinea de 0.75; scadem 0.25, deoarece amplitudinea este cuprinsa intre -1 si 0.5;
+subplot(312)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+% rezolutie temporara de 200 ms
+t=0:0.2:13; %0.2=200ms;
+F=0.5;
+duty=25;
+nivel=0.25;
+P=0.75;
+s=(0.75*square(2*pi*F*t,25))-0.25;  % generam semanalul cu amplitudinea de 0.75; scadem 0.25, deoarece amplitudinea este cuprinsa intre -1 si 0.5;
+subplot(313)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
