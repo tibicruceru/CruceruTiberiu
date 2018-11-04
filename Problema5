@@ -1,0 +1,38 @@
+%5. Semnal sinusoidal redresat dubl? alternan??
+% Perioada semnalului sinusoidal neredresat: 4 s.
+% Amplitudine: 1.5.
+% T=4 => F=1/4
+
+% w=2*pi*F;
+% s=A*abs(sin(w*t))
+
+% rezolutia temporara de 2ms
+t=0:0.002:13; % 0.002 = 2ms rezolutia temporala
+F=0.25;
+s=1.5*abs(sin(2*pi*F*t)); % generam semnalul sinusoidal;pentru a face redresarea dubla alternanta,folosim comanda 
+% abs-care returneaza valoarea absoluta
+subplot(311)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+% rezolutia temporara de 20ms
+t=0:0.02:13; % 0.02 = 20ms
+F=0.25;
+s=1.5*abs(sin(2*pi*F*t));
+subplot(312)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+% rezolutia temporara de 200ms
+t=0:0.2:13; % 0.2 = 200ms
+F=0.25;
+s=1.5*abs(sin(2*pi*F*t));
+subplot(313)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
