@@ -1,0 +1,51 @@
+%2. Semnal triunghiular periodic
+% Perioad: T=5 s => F=1/T=0.2Hz
+% Nivel maxim: +1.
+% Nivel minim: -2.
+% Panta+ 1 V/s Observatie: Panta– [V/s] rezulta din calcule
+
+%Din nivelul maxim si nivelul minim rezulta ca Amplitudinea=1.5;
+
+
+%rezolutia temporara de 2ms
+hold on;
+t = 0: 0.002: 13; % 0.002=2ms
+F=0.2;
+s=1.5*sawtooth(t*2*pi*F,0.5)-0.5; 
+% din sitaxa lui sawtooth: trebuie sa punem 0.5 dupa virgula pentru a fi simetric-duty 
+%daca inmultim cu 5/6 obtinem panta de 1v
+%scadem 0.5 pentru a avea nivelul maxim 1 si nivelul minim -2
+subplot(311)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+
+%rezolutia temporara de 20ms
+hold on;
+t = 0: 0.02: 13; % 0.02=2ms
+F=0.2;
+s=1.5*sawtooth(t*2*pi*F,0.5)-0.5;
+% din sitaxa lui sawtooth: trebuie sa punem 0.5 dupa virgula pentru a fi simetric-duty 
+%daca inmultim cu 5/6 obtinem panta de 1v
+%scadem 0.5 pentru a avea nivelul maxim 1 si nivelul minim -2
+subplot(312)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
+
+%rezolutie temporara de 200ms
+hold on;
+t = 0: 0.2: 13; % 0.2=2ms
+F=0.2;
+s=1.5*sawtooth(t*2*pi*F,0.5)-0.5;
+% din sitaxa lui sawtooth: trebuie sa punem 0.5 dupa virgula pentru a fi simetric-duty 
+%daca inmultim cu 5/6 obtinem panta de 1v
+%scadem 0.5 pentru a avea nivelul maxim 1 si nivelul minim -2
+subplot(313)
+plot(t,s);
+grid;
+xlabel('t [s]');
+ylabel('A [V]');
