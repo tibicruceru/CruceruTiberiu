@@ -6,7 +6,7 @@
 T0=12;
 f=1/T0;
 w=2*pi*f;
-pas=T0/10000;
+pas=T0/1000;
 t = 0:pas:6*T0;
 N=50;
 s=abs(sawtooth(w*t,0.5));
