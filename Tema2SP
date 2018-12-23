@@ -2,6 +2,12 @@
 %T=40
 %D=6 => T0=2*D => T0=12
 
+%In concluzie, analiza Fourier a semnalelor analogice exprima orice semnal ce indeplineste criteriul de suficienta Diriclet
+%intr-o suma finita de semnale elementare. Acest lucru este folositor in
+%analiza circuitelor in domeniul fazorial. Acesta mai sta si la baza reconstruirii unui
+%semnal necunoscut pe baza spectrului sau de amplitudini si de faze. Acestea pot
+%fi descoperite cu un analizator de spectru
+
 
 T0=12;
 f=1/T0;
